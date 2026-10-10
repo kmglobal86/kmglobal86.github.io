@@ -1,0 +1,382 @@
+---
+permalink: /social
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Google Analytics: Uncomment and replace G-XXXXXXXXXX with your own GA4 tracking ID -->
+	<!--
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-XXXXXXXXXX');
+	</script>
+	-->
+
+	<meta charset="UTF-8">
+	<title>Social Media — [Your Name]</title>
+
+	<meta name="author" content="[Your Name]">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Find [Your Name] across social media platforms — Facebook, Instagram, Reddit, Discord, Telegram, and more.">
+
+	<!-- Canonical URL: Replace with your GitHub Pages URL -->
+	<link rel="canonical" href="https://your-username.github.io/social">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://your-username.github.io/social">
+	<meta property="og:title" content="Social Media — [Your Name]">
+	<meta property="og:description" content="Find [Your Name] across social media platforms.">
+	<meta property="og:image" content="https://your-username.github.io/images/avatar.webp">
+	<meta property="og:locale" content="en_US">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Social Media — [Your Name]">
+	<meta name="twitter:description" content="Find [Your Name] across social media platforms.">
+	<meta name="twitter:image" content="https://your-username.github.io/images/avatar.webp">
+	<meta name="twitter:creator" content="@your_twitter_handle">
+
+	<!-- Security -->
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self';
+				 script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+				 style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+				 font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+				 img-src 'self' data: https:;
+				 connect-src 'self' https://formsubmit.co https://www.google-analytics.com;">
+
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+	<link rel="preload" href="/js/components.js" as="script">
+	<link rel="preload" href="/css/stylesheet.min.css" as="style">
+	<link rel="preload" href="https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font"
+		type="font/woff2" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2" as="font"
+		type="font/woff2" crossorigin>
+
+	<link rel="stylesheet" type="text/css" href="/css/stylesheet.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/mail.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+		media="print" onload="this.media='all'" />
+	<noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+	</noscript>
+
+	<!-- Immediate theme detection to prevent flash -->
+	<script>
+		(function () {
+			var stored = localStorage.getItem('theme');
+			if (stored === 'dark' || (!stored && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark-mode');
+			}
+		})();
+		// If arriving via the footer Social Media link, keep page hidden until
+		// we've jumped to the bottom — then we reveal and animate up to top.
+		if (sessionStorage.getItem('scrollFromBottom') === '1') {
+			sessionStorage.removeItem('scrollFromBottom');
+			history.scrollRestoration = 'manual';
+			window._scrollFromBottom = true;
+			document.documentElement.style.visibility = 'hidden';
+		} else {
+			document.documentElement.style.visibility = 'visible';
+		}
+	</script>
+
+	<script src="/js/components.js"></script>
+<script src="/js/mail.js" defer></script>
+	<script src="/js/last_modified.js" defer></script>
+	<script src="/js/hamburger.js" defer></script>
+	<script src="/js/navbar_scroll.js" defer></script>
+
+	<!-- Favicon and App Icons -->
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#8dd3e3">
+	<meta name="msapplication-TileImage" content="/images/mstile-150x150.png">
+	<meta name="msapplication-config" content="/browserconfig.xml">
+	<meta name="theme-color" content="#8dd3e3">
+
+	<style>
+		.social-grid {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			margin-top: 30px;
+			margin-bottom: 40px;
+		}
+
+		.social-item {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			padding: 14px 18px;
+			border: 1px solid rgba(0, 0, 0, 0.12);
+			border-radius: 10px;
+			background: rgba(0, 0, 0, 0.02);
+			transition: box-shadow 0.2s ease, transform 0.2s ease;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.social-item:hover {
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+			transform: translateY(-2px);
+			color: inherit;
+		}
+
+		html.dark-mode .social-item {
+			border-color: rgba(255, 255, 255, 0.1);
+			background: rgba(255, 255, 255, 0.03);
+		}
+
+		html.dark-mode .social-item:hover {
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+		}
+
+		.social-icon {
+			width: 42px;
+			height: 42px;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 22px;
+			flex-shrink: 0;
+			color: #fff;
+		}
+
+		.social-name {
+			font-weight: 700;
+			font-size: 15px;
+			min-width: 110px;
+			flex-shrink: 0;
+		}
+
+		.social-url {
+			font-size: 13px;
+			color: #1772d0;
+			word-break: break-all;
+		}
+
+		html.dark-mode .social-url {
+			color: #8aadf4;
+		}
+
+		.social-item:hover .social-url {
+			color: #f09228;
+		}
+
+		.letterboxd-dots {
+			display: flex;
+			gap: 4px;
+		}
+
+		.letterboxd-dot {
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+		}
+
+		.letterboxd-green { background: #00e054; }
+		.letterboxd-orange { background: #ff8c00; }
+		.letterboxd-blue { background: #40bcf4; }
+
+		/* platform colours */
+		.icon-facebook   { background: #1877f2; }
+		.icon-instagram  { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+		.icon-reddit     { background: #ff4500; }
+		.icon-discord    { background: #5865f2; }
+		.icon-letterboxd { background: #1c222b; }
+		.icon-pinterest  { background: #e60023; }
+		.icon-playgames  { background: #1a73e8; }
+		.icon-telegram   { background: #2aabee; }
+		.icon-mal        { background: #2e51a2; }
+		.icon-anilist    { background: #02a9ff; }
+
+		@media screen and (max-width: 600px) {
+			.social-name {
+				min-width: 80px;
+			}
+			.social-url {
+				font-size: 11.5px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+	<site-navbar></site-navbar>
+
+	<span id="main-content"></span>
+	<table class="section" style="margin-top: 30px;">
+		<tbody>
+			<tr style="padding:0px">
+				<td>
+					<table class="section profile-section">
+						<tbody>
+							<tr style="padding:0px">
+								<td style="width:100%;vertical-align:middle;text-align:center;">
+									<!-- Profile Image: Replace avatar.webp with your own image file -->
+									<div style="margin-bottom: 20px;">
+										<a href="/images/avatar.webp">
+											<img style="width:300px;max-width:100%;object-fit:cover;border-radius:50%;"
+												alt="Profile photo of [Your Name]"
+												src="/images/avatar.webp"
+												class="hoverZoomLink" loading="eager" decoding="async"
+												width="300" height="300">
+										</a>
+									</div>
+
+									<h1 class="name" style="text-align:center;font-size:2.5em;margin-top:10px;margin-bottom:5px;">
+										[Your Name]
+									</h1>
+
+									<p style="text-align:center;margin-top:5px;margin-bottom:10px;font-size:0.85em;color:#666;">
+										Find me across the internet
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- Social Media List: Replace each href and social-url span with your own profile URLs -->
+					<div class="social-grid">
+
+						<a class="social-item" href="https://facebook.com/your-username/" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-facebook">
+								<i class="bi bi-facebook"></i>
+							</div>
+							<span class="social-name">Facebook</span>
+							<span class="social-url">facebook.com/your-username</span>
+						</a>
+
+						<a class="social-item" href="https://instagram.com/your-username/" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-instagram">
+								<i class="bi bi-instagram"></i>
+							</div>
+							<span class="social-name">Instagram</span>
+							<span class="social-url">instagram.com/your-username</span>
+						</a>
+
+						<a class="social-item" href="https://reddit.com/user/your-username/" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-reddit">
+								<i class="bi bi-reddit"></i>
+							</div>
+							<span class="social-name">Reddit</span>
+							<span class="social-url">reddit.com/user/your-username</span>
+						</a>
+
+						<a class="social-item" href="https://discord.com/users/YOUR_DISCORD_USER_ID" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-discord">
+								<i class="bi bi-discord"></i>
+							</div>
+							<span class="social-name">Discord</span>
+							<span class="social-url">discord.com/users/YOUR_DISCORD_USER_ID</span>
+						</a>
+
+						<a class="social-item" href="https://letterboxd.com/your-username/" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-letterboxd" aria-hidden="true">
+								<span class="letterboxd-dots">
+									<span class="letterboxd-dot letterboxd-green"></span>
+									<span class="letterboxd-dot letterboxd-orange"></span>
+									<span class="letterboxd-dot letterboxd-blue"></span>
+								</span>
+							</div>
+							<span class="social-name">Letterboxd</span>
+							<span class="social-url">letterboxd.com/your-username</span>
+						</a>
+
+						<a class="social-item" href="https://pinterest.com/your-username/" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-pinterest">
+								<i class="bi bi-pinterest"></i>
+							</div>
+							<span class="social-name">Pinterest</span>
+							<span class="social-url">pinterest.com/your-username</span>
+						</a>
+
+						<a class="social-item" href="https://my.play/your-username" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-playgames" style="font-size:18px;">
+								&#9654;
+							</div>
+							<span class="social-name">Play Games</span>
+							<span class="social-url">my.play/your-username</span>
+						</a>
+
+						<a class="social-item" href="https://t.me/your-username" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-telegram">
+								<i class="bi bi-telegram"></i>
+							</div>
+							<span class="social-name">Telegram</span>
+							<span class="social-url">t.me/your-username</span>
+						</a>
+
+						<a class="social-item" href="https://myanimelist.net/profile/your-username" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-mal" style="font-size:12px;font-weight:900;">
+								MAL
+							</div>
+							<span class="social-name">MyAnimeList</span>
+							<span class="social-url">myanimelist.net/profile/your-username</span>
+						</a>
+
+						<a class="social-item" href="https://anilist.co/user/your-username/" target="_blank" rel="noopener noreferrer">
+							<div class="social-icon icon-anilist" style="font-size:12px;font-weight:900;">
+								AL
+							</div>
+							<span class="social-name">AniList</span>
+							<span class="social-url">anilist.co/user/your-username</span>
+						</a>
+
+					</div>
+
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		if (window._scrollFromBottom) {
+			// Script is at end of body so DOM is already ready.
+			// Use rAF to ensure layout is complete before reading scrollHeight.
+			requestAnimationFrame(function () {
+				var startPos = document.body.scrollHeight;
+				window.scrollTo(0, startPos);
+				document.documentElement.style.visibility = 'visible';
+
+				var duration = 900;
+				var startTime = null;
+
+				function easeInOutCubic(t) {
+					return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+				}
+
+				function animate(currentTime) {
+					if (startTime === null) startTime = currentTime;
+					var elapsed = currentTime - startTime;
+					var progress = Math.min(elapsed / duration, 1);
+					window.scrollTo(0, startPos * (1 - easeInOutCubic(progress)));
+					if (elapsed < duration) requestAnimationFrame(animate);
+				}
+
+				requestAnimationFrame(animate);
+			});
+		}
+	</script>
+
+	<site-footer></site-footer>
+
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Google Analytics: Uncomment and replace G-XXXXXXXXXX with your own GA4 tracking ID -->
+	<!--
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-XXXXXXXXXX');
+	</script>
+	-->
+
+	<meta charset="UTF-8">
+	<title>[Your Name]</title>
+
+	<meta name="author" content="[Your Name]">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="Portfolio of [Your Name] — a [Your Degree] graduate from [Your University] with a strong foundation in [Your Field 1], [Your Field 2], and [Your Field 3]. Passionate about [Your Interests].">
+
+	<!-- Canonical URL: Replace with your GitHub Pages URL -->
+	<link rel="canonical" href="https://your-username.github.io/">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://your-username.github.io/">
+	<meta property="og:title" content="[Your Name] — Portfolio">
+	<meta property="og:description" content="[Your brief professional description.]">
+	<meta property="og:image" content="https://your-username.github.io/images/avatar.webp">
+	<meta property="og:locale" content="en_US">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="[Your Name] — Portfolio">
+	<meta name="twitter:description" content="[Your brief professional description.]">
+	<meta name="twitter:image" content="https://your-username.github.io/images/avatar.webp">
+	<meta name="twitter:creator" content="@your_twitter_handle">
+
+	<!-- Security -->
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self';
+				 script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+				 style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+				 font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+				 img-src 'self' data: https:;
+				 connect-src 'self' https://formsubmit.co https://www.google-analytics.com;">
+
+	<!-- Preconnect to external domains -->
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+	<!-- Preload critical resources: Replace avatar.webp with your own image filename -->
+	<link rel="preload" href="images/avatar.webp" as="image" type="image/webp">
+	<link rel="preload" href="js/components.js" as="script">
+	<link rel="preload" href="css/stylesheet.min.css" as="style">
+	<link rel="preload" href="https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2" as="font"
+		type="font/woff2" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2" as="font"
+		type="font/woff2" crossorigin>
+
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mail.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" type="text/css" href="css/mail.css">
+	</noscript>
+
+	<!-- Immediate theme detection to prevent flash -->
+	<script>
+		// Detect user preference immediately and apply class to prevent flash
+		// Check localStorage first, fall back to system preference
+		var storedTheme = localStorage.getItem('theme');
+		if (storedTheme === 'dark' || (!storedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.classList.add('dark-mode');
+		}
+		// Prevent FOUC by setting body visibility
+		document.documentElement.style.visibility = 'visible';
+
+		// Prevent the browser from jumping to the hash anchor on load so we can
+		// animate from the top instead. Store the hash, strip it from the URL,
+		// and keep the page hidden until our animation is ready to start.
+		if (window.location.hash) {
+			history.scrollRestoration = 'manual';
+			window._pendingScrollHash = window.location.hash.substring(1);
+			history.replaceState(null, '', window.location.pathname + window.location.search);
+			document.documentElement.style.visibility = 'hidden';
+		}
+	</script>
+
+	<script src="js/components.js"></script>
+	<script src="js/mail.js" defer></script>
+	<script src="js/last_modified.js" defer></script>
+	<script src="js/hamburger.js" defer></script>
+	<script src="js/navbar_scroll.js" defer></script>
+	<script src="js/navbar_active.js" defer></script>
+	<script src="js/bio_scroll.js" defer></script>
+	<script src="js/smooth_scroll.js" defer></script>
+	<script src="js/cross_page_scroll.js" defer></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+		media="print" onload="this.media='all'" />
+	<noscript>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+	</noscript>
+
+	<!-- Favicon and App Icons -->
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<!-- Apple Touch Icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+	<!-- Android Chrome Icons -->
+	<link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
+
+	<!-- Web App Manifest -->
+	<link rel="manifest" href="/site.webmanifest">
+
+	<!-- Microsoft Tiles -->
+	<meta name="msapplication-TileColor" content="#8dd3e3">
+	<meta name="msapplication-TileImage" content="/images/mstile-150x150.png">
+	<meta name="msapplication-config" content="/browserconfig.xml">
+
+	<!-- Theme Color -->
+	<meta name="theme-color" content="#8dd3e3">
+
+	<!-- Google Search Console verification: Replace with your own verification meta tag -->
+	<!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> -->
+
+	<!-- Structured Data: Replace all fields with your own information -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "[Your Name]",
+		"url": "https://your-username.github.io/",
+		"image": "https://your-username.github.io/images/avatar.webp",
+		"jobTitle": "[Your Job Title]",
+		"worksFor": {
+			"@type": "Organization",
+			"name": "[Your Company]"
+		},
+		"alumniOf": {
+			"@type": "CollegeOrUniversity",
+			"name": "[Your University]"
+		},
+		"sameAs": [
+			"https://github.com/your-username",
+			"https://linkedin.com/in/your-username"
+		]
+	}
+	</script>
+</head>
+
+<body>
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+	<site-navbar></site-navbar>
+
+<span id="main-content"></span>
+<table class="section" id="Bio" style="margin-top: 30px;">
+		<tbody>
+			<tr style="padding:0px">
+				<td>
+					<table class="section profile-section">
+						<tbody>
+							<tr style="padding:0px">
+								<td style="width:100%;vertical-align:middle;text-align:center;">
+									<!-- Profile Image: Replace avatar.webp with your own image file -->
+									<div style="margin-bottom: 20px;">
+										<a href="images/avatar.webp"><img
+												style="width:300px;max-width:100%;object-fit: cover; border-radius: 50%;"
+												alt="Profile photo of [Your Name]"
+												src="images/avatar.webp" class="hoverZoomLink"
+												loading="eager" decoding="async" fetchpriority="high" width="300" height="300"></a>
+									</div> <!-- Name -->
+									<h1 class="name" id="Bio-header"
+										style="text-align:center; font-size:2.5em; margin-top: 10px; margin-bottom: 5px;">
+										[Your Name]
+									</h1>
+
+									<!-- Links: Replace each href with your own URLs -->
+									<p
+										style="text-align:center; margin-top: 5px; margin-bottom: 50px; font-size: 0.8em;">
+										<a href="data/demo.pdf">Resume</a> &nbsp;/&nbsp;
+										<a href="mailto:your.email@example.com">Email</a> &nbsp;/&nbsp;
+										<a href="https://github.com/your-username">Github</a> &nbsp;/&nbsp;
+										<a href="https://linkedin.com/in/your-username">LinkedIn</a> &nbsp;/&nbsp;
+										<a href="https://leetcode.com/your-username/">LeetCode</a> &nbsp;/&nbsp;
+										<a href="https://your-blog-url.com/">Blog</a>
+									</p>
+
+									<!-- Bio: Replace with your own biography -->
+									<p style="text-align: justify; max-width: 800px; margin: 20px auto;">
+										<b style="display: block; text-align: center;">A [Your Degree] graduate from [Your Country] with a strong foundation in [Your Field 1], [Your Field 2], and [Your Field 3].</b>
+										<br><br>
+										I completed my [Degree] at <a href="https://your-university.edu/">[Your University]</a>. Currently, I am working as a <b>[Your Job Title] at [Your Company]</b>, where I [brief description of your responsibilities and contributions].
+										<br><br>
+										I have demonstrated proficiency in <b>[Skill Area 1]</b>, <b>[Skill Area 2]</b>, and <b>[Skill Area 3]</b> through a range of academic projects and professional experiences. My interests also extend to <b>[Interest 1]</b> and <b>[Interest 2]</b>, where I actively explore innovative solutions and industry best practices. I continuously strive to expand my technical capabilities through hands-on projects and active contributions to the open-source community.
+										<br>
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="section-bottom-indicator" data-section="Bio"></div>
+
+					<table class="section">
+						<tbody>
+							<tr>
+								<td class="sub-section">
+									<h2 id="Experience">Experience</h2>
+
+									<ul>
+										<li>
+											<b>[Job Title]</b> [[Start Date] - ] <br>
+											<a href="https://your-company-website.com/">[Company Name]</a> <br>
+											<ul>
+												<li>[Brief description of your role and what the company does.]</li>
+												<li><b>Responsibilities</b>: [List your main responsibilities here.]</li>
+												<li><b>Key Achievements</b>:
+													<ul>
+														<li>[Achievement 1 with measurable impact, e.g., "Reduced processing time by 30%."]</li>
+														<li>[Achievement 2 with measurable impact.]</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+
+									<ul>
+										<li>
+											<b>[Open Source Role, e.g., Maintainer/Contributor]</b> [[Start Date] - ] <br>
+											<a href="https://github.com/project/repo">[Open Source Project Name]</a> <br>
+											<ul>
+												<li>[Describe the project and your contributions, e.g., "Contributed to an open source project with X+ GitHub stars by doing Y."]</li>
+												<li><b>Skills Gained</b>: [Skills you developed through this contribution.]</li>
+											</ul>
+										</li>
+									</ul>
+
+									<ul>
+										<li>
+											<b>[Previous Role]</b> [[Start Date] - [End Date]] <br>
+											<a href="https://previous-company-website.com/">[Previous Company/Organization]</a> <br>
+											<ul>
+												<li>[Brief description of the role and your contributions.]</li>
+												<li><b>Responsibilities</b>: [Your main responsibilities in this role.]</li>
+												<li><b>Skills Gained</b>: [Skills you developed in this role.]</li>
+											</ul>
+										</li>
+									</ul>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="section-bottom-indicator" data-section="Experience"></div>
+
+					<table class="section">
+						<tbody>
+							<tr>
+								<td class="sub-section">
+									<h2 id="Education">Education & Certification</h2>
+									<ul>
+										<li>
+											<b>Completed [Degree] in <a
+												href="https://your-university.edu/program">[Your Program]</a></b> [[Graduation Year]]
+											<br>
+											<a href="https://your-university.edu/">[Your University], [Your Country]</a> <br>
+											<ul>
+												<li>CGPA: <b>[Your GPA]/[Max GPA]</b> ([Distinction/Honors if applicable])</li>
+												<li>[Any honors, scholarships, or awards received.]</li>
+												<li>Notable elective courses taken beyond core curriculum:
+													<ul>
+														<li>[Course 1: e.g., Machine Learning]</li>
+														<li>[Course 2: e.g., Cloud Computing]</li>
+														<li>[Course 3: e.g., Ethical Hacking]</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+									<ul>
+										<li><b>Completed <a href="https://certification-link.com">[Certification Name]</a></b> [[Year]]<br>
+											<ul>
+												<li>[What you learned from this certification.]</li>
+												<li>[Specific skill or knowledge gained.]</li>
+												<li>[Any notable outcome, e.g., hands-on projects completed.]</li>
+											</ul>
+										</li>
+									</ul>
+									<ul>
+										<li><b>Completed <a href="https://certification-link.com">[Another Certification]</a></b> [[Year]]<br>
+											<ul>
+												<li>[What you learned from this certification.]</li>
+												<li>[Specific skill or knowledge gained.]</li>
+											</ul>
+										</li>
+									</ul>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="section-bottom-indicator" data-section="Education"></div>
+
+
+
+					<table class="section">
+						<tbody>
+							<tr>
+								<td class="sub-section">
+									<h2 id="Project">Project</h2>
+									<ul class="extra_gap">
+										<li>
+											<b><a href="https://github.com/your-username/project-one">[Project Name]</a></b> [[Year]]<br>
+											<ul>
+												<li>[Describe what the project does, the problem it solves, and any notable features. Include measurable impact if applicable, e.g., "serves 200+ monthly active users".]</li>
+												<li><b>Skill Gained</b>: [Technologies and skills used or learned while building this project, e.g., "React, Node.js, REST API design, responsive UI development."]</li>
+												<li><b>Live Demo</b>: <a
+														href="https://your-demo-link.com/"
+														target="_blank" rel="noopener noreferrer">https://your-demo-link.com/</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+
+									<ul class="extra_gap">
+										<li>
+											<b><a href="https://github.com/your-username/project-two">[Project Name]</a></b> [[Year]]<br>
+											<ul>
+												<li>[Describe what the project does and its key features.]</li>
+												<li><b>Skill Gained</b>: [Technologies and skills used or learned while building this project.]</li>
+												<li><b>Live Demo</b>: <a href="https://your-demo-link.com/"
+														target="_blank" rel="noopener noreferrer">https://your-demo-link.com/</a> ([Note if deployed on free tier, e.g., "may take a moment to load."])
+												</li>
+											</ul>
+										</li>
+									</ul>
+
+									<ul class="extra_gap">
+										<li>
+											<b><a href="https://github.com/your-username/project-three">[Project Name]</a></b> [[Year]]<br>
+											<ul>
+												<li>[Describe what the project does, key technologies used, and your role if it was a team project.]</li>
+												<li><b>Skill Gained</b>: [Technologies and skills used or learned while building this project.]</li>
+											</ul>
+										</li>
+									</ul>
+
+									<ul class="extra_gap">
+										<li>
+											<b><a href="https://github.com/your-username/project-four">[Project Name]</a></b> [[Year]]<br>
+											<ul>
+												<li>[Describe what the project does. Mention any interesting technical challenges you solved.]</li>
+												<li><b>Skill Gained</b>: [Technologies and skills used or learned while building this project.]</li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="section-bottom-indicator" data-section="Project"></div>
+					<table class="section">
+						<tbody>
+							<tr>
+								<td class="sub-section">
+									<h2 id="Technical_Skill">Technical Skill</h2>
+									<ul class="extra_gap">
+										<li><b>Languages and Frameworks</b>: [e.g., HTML, JavaScript, Python, Java, React, Django, Spring Boot]</li>
+										<li><b>Library</b>: [e.g., TensorFlow, Pandas, NumPy, Matplotlib]</li>
+										<li><b>Tools</b>: [e.g., Docker, Git, Jira, Selenium, Postman, GitHub Actions]</li>
+										<li><b>Databases</b>: [e.g., PostgreSQL, MySQL, MongoDB]</li>
+										<li><b>Operating Systems</b>: [e.g., Ubuntu, Debian, Windows]</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="section-bottom-indicator" data-section="Technical_Skill"></div>
+
+
+
+					<table class="section">
+						<tbody>
+							<tr>
+								<td class="sub-section">
+									<h2 id="Research">Research</h2>
+									<ul>
+										<li>
+											<b>Undergraduate Thesis:</b> <b><a
+												href="https://link-to-your-paper.com">[Your Research Title]</a></b> [[Year]]<br>
+											<ul>
+												<li><b>Status</b>: [Published / Under review for publication / In progress]</li>
+												<li><b>Abstract</b>: [Provide a brief abstract of your research here. Describe the problem you investigated, the methods you used, and the key findings or contributions of your work.]</li>
+											</ul>
+										</li>
+									</ul>
+
+									<ul>
+										<li>
+											<b>Course Research:</b> <b><a
+												href="https://github.com/your-username/research-project">[Research Project Title]</a></b> [[Course Name]]<br>
+											<ul>
+												<li>[Brief description of the research, the dataset or methods used, and your approach to the problem.]</li>
+												<li><b>Results</b>: [Key results or findings, including any accuracy metrics or performance benchmarks, e.g., "Achieved 95%+ accuracy using a Decision Tree classifier."]</li>
+												<li><b>Skills Gained</b>: [Skills learned or applied during this research, e.g., data preprocessing, ML model evaluation, etc.]</li>
+											</ul>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="section-bottom-indicator" data-section="Research"></div>
+
+
+
+					<table class="section">
+						<tbody>
+							<tr>
+								<td class="sub-section">
+									<h2 id="Miscellaneous">Miscellaneous</h2>
+									<ul>
+										<li><b>Participated in <a
+												href="https://event-link.com">[Event Name, e.g., Hackathon/CTF/Open Source Event]</a></b>
+											[[Year]]<br>
+											<ul>
+												<li>[Brief description of the event, your participation, and any notable achievements or outcomes.]</li>
+												<li><b>Skills Gained</b>: [Skills developed or knowledge gained from participating in this event.]</li>
+											</ul>
+										</li>
+									</ul>
+
+									<ul>
+										<li><b>Participated in <a
+												href="https://event-link.com">[Another Event Name]</a></b>
+											[[Year]]<br>
+											<ul>
+												<li>[Brief description of the event and your participation. Include any recognition or completion badges earned.]</li>
+												<li><b>Skills Gained</b>: [Skills developed during this event.]</li>
+											</ul>
+										</li>
+									</ul>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+
+
+				</td>
+		</tr>
+	</table>
+	<div class="section-bottom-indicator" data-section="Miscellaneous"></div>
+
+	<site-footer></site-footer>
+
+</body>
+</html>

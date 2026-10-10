@@ -1,0 +1,22 @@
+{
+  "name": "[Your Name]",
+  "short_name": "[Short Name]",
+  "description": "Portfolio of [Your Name] — [Your brief description, e.g., CS graduate, Software Engineer, and open-source contributor.]",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#8dd3e3",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

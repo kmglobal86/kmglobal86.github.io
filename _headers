@@ -1,0 +1,11 @@
+# Cache control for resume PDF
+/data/demo.pdf
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# Cache control for all PDFs in data folder
+/data/*.pdf
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
