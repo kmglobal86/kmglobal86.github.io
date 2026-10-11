@@ -1,20 +1,690 @@
-<title>Kawsar Mia | System Analyst Portfolio</title>
 
-<meta name="author" content="Kawsar Mia">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description"
-    content="Portfolio of Kawsar Mia, a System Analyst and software professional focused on requirements analysis, software development, QA testing, and DevOps.">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="canonical" href="https://kmglobal86.github.io/">
+    <title>Kawsar Mia | System Analyst Portfolio</title>
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://kmglobal86.github.io/">
-<meta property="og:title" content="Kawsar Mia — Professional Portfolio">
-<meta property="og:description" content="System Analysis, Software Development, QA & Testing, and DevOps Portfolio.">
-<meta property="og:image" content="https://kmglobal86.github.io/images/avatar.webp">
-<meta property="og:locale" content="en_US">
+    <meta name="author" content="Kawsar Mia">
+    <meta name="description" content="Portfolio of Kawsar Mia, focused on System Analysis, System Design, Software Development, and DevOps.">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kawsar Mia — Professional Portfolio">
-<meta name="twitter:description" content="System Analysis, Software Development, QA & Testing, and DevOps Portfolio.">
-<meta name="twitter:image" content="https://kmglobal86.github.io/images/avatar.webp">
+    <link rel="canonical" href="https://kmglobal86.github.io/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kawsar Mia | Professional Portfolio">
+    <meta property="og:url" content="https://kmglobal86.github.io/">
+    <meta property="og:description" content="System Analysis, System Design, Software Development, and DevOps.">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #0f172a;
+            --text: #334155;
+            --muted: #64748b;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            color: var(--dark);
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+        }
+
+        .hero {
+            padding: 100px 0 90px;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-label {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        h1 {
+            color: var(--dark);
+            font-size: clamp(36px, 6vw, 60px);
+            line-height: 1.15;
+            margin: 18px 0;
+        }
+
+        .hero h2 {
+            color: var(--primary);
+            font-size: clamp(20px, 3vw, 28px);
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 760px;
+            font-size: 17px;
+            color: var(--muted);
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 21px;
+            border-radius: 7px;
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .btn:hover {
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        section {
+            padding: 75px 0;
+            scroll-margin-top: 75px;
+        }
+
+        section:nth-of-type(even) {
+            background: var(--light);
+        }
+
+        .section-title {
+            color: var(--dark);
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            color: var(--muted);
+            max-width: 760px;
+            margin-bottom: 32px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+        }
+
+        .card h3 {
+            color: var(--dark);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            margin-bottom: 12px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .card li {
+            margin-bottom: 6px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 14px;
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: #1d4ed8;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 13px;
+        }
+
+        .status {
+            display: inline-block;
+            margin-bottom: 12px;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 4px 9px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .contact-box {
+            background: var(--dark);
+            color: var(--white);
+            border-radius: 14px;
+            padding: 35px;
+        }
+
+        .contact-box h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            margin-bottom: 10px;
+        }
+
+        .contact-box a {
+            color: #93c5fd;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            background: var(--dark);
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 14px 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 10px 15px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="container">
+        <a class="logo" href="#home">Kawsar Mia</a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#analysis">System Analysis</a></li>
+            <li><a href="#design">System Design</a></li>
+            <li><a href="#development">Development</a></li>
+            <li><a href="#devops">DevOps</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <span class="hero-label">Professional Portfolio</span>
+
+            <h1>Kawsar Mia</h1>
+
+            <h2>System Analysis | System Design | Software Development | DevOps</h2>
+
+            <p>
+                A computer science professional focused on understanding business
+                requirements, designing software solutions, developing web
+                applications, and learning reliable deployment and automation
+                practices.
+            </p>
+
+            <div class="buttons">
+                <a class="btn" href="#projects">Explore Projects</a>
+                <a class="btn btn-outline" href="#contact">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+
+            <p class="section-intro">
+                I have an MSc in Computer Science and Engineering from
+                Dhaka International University. My professional interests span
+                System Analysis, System Design and Architecture, Software
+                Development, and DevOps. I focus on translating business needs
+                into structured requirements, understandable designs, and
+                practical software solutions. I am also strengthening my
+                hands-on skills in automated testing, containerization, and
+                CI/CD.
+            </p>
+        </div>
+    </section>
+
+    <section id="analysis">
+        <div class="container">
+            <h2 class="section-title">01. System Analysis</h2>
+
+            <p class="section-intro">
+                Organizing business needs into clear, traceable requirements
+                that guide development and testing.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>Requirements Engineering</h3>
+                    <ul>
+                        <li>Requirements gathering and analysis</li>
+                        <li>Business Requirements Document (BRD)</li>
+                        <li>Software Requirements Specification (SRS)</li>
+                        <li>Functional and non-functional requirements</li>
+                        <li>Business rules and acceptance criteria</li>
+                        <li>Requirements management and change management</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Business Process & Validation</h3>
+                    <ul>
+                        <li>Business process analysis and process flows</li>
+                        <li>Use cases and user scenarios</li>
+                        <li>Stakeholder and requirement documentation</li>
+                        <li>User Acceptance Testing (UAT) scenarios</li>
+                        <li>Agile/Scrum and SDLC concepts</li>
+                        <li>Software quality and technical documentation</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="design">
+        <div class="container">
+            <h2 class="section-title">02. System Design & Architecture</h2>
+
+            <p class="section-intro">
+                Structuring software components, data, interfaces, and
+                application workflows to support maintainable solutions.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>System & Application Design</h3>
+                    <ul>
+                        <li>System architecture concepts</li>
+                        <li>Application structure and MVC pattern</li>
+                        <li>UML use case and activity diagrams</li>
+                        <li>Sequence and workflow diagrams</li>
+                        <li>Technical design documentation</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Database & API Design</h3>
+                    <ul>
+                        <li>Entity Relationship Diagrams (ERD)</li>
+                        <li>Relational database design</li>
+                        <li>Tables, keys, and relationships</li>
+                        <li>REST API structure and JSON</li>
+                        <li>Data flow and interface design</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="development">
+        <div class="container">
+            <h2 class="section-title">03. Software Development</h2>
+
+            <p class="section-intro">
+                Building and improving web application functionality while
+                connecting requirements with implementation.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>Web Development</h3>
+                    <p>Technologies and concepts I work with or study:</p>
+
+                    <div class="tag-list">
+                        <span class="tag">PHP</span>
+                        <span class="tag">Laravel</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">MVC</span>
+                        <span class="tag">CRUD</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">Fetch API</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Database & Testing</h3>
+                    <div class="tag-list">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Relational Design</span>
+                        <span class="tag">Manual Testing</span>
+                        <span class="tag">Test Scenarios</span>
+                    </div>
+
+                    <p style="margin-top:18px">
+                        Focus areas include implementing application features,
+                        validating user workflows, and improving software quality.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="devops">
+        <div class="container">
+            <h2 class="section-title">04. DevOps & Deployment</h2>
+
+            <p class="section-intro">
+                Developing practical knowledge of version control, deployment,
+                automation, and application operations.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>Tools & Concepts</h3>
+
+                    <div class="tag-list">
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">GitHub Actions</span>
+                        <span class="tag">Deployment</span>
+                        <span class="tag">Monitoring Concepts</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Current Learning</h3>
+                    <span class="status">Currently Learning</span>
+
+                    <ul>
+                        <li>Docker and container fundamentals</li>
+                        <li>GitHub Actions and CI/CD pipelines</li>
+                        <li>PHPUnit and Laravel feature testing</li>
+                        <li>Application deployment workflows</li>
+                        <li>Linux administration fundamentals</li>
+                    </ul>
+
+                    <p style="margin-top:12px">
+                        These are ongoing learning areas, not claims of
+                        professional production experience.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+
+            <p class="section-intro">
+                A practical project demonstrating web application development,
+                alongside documentation for a proposed larger system.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>Student Management System</h3>
+
+                    <p>
+                        A Laravel-based web application using PHP, Blade,
+                        JavaScript, and MySQL. Existing functionality includes
+                        a public website, login, an admin dashboard, and
+                        student creation, listing, and updating.
+                    </p>
+
+                    <p>
+                        <strong>Current scope:</strong> The implemented
+                        application has an Admin role. Additional SaaS
+                        capabilities are not represented as completed features.
+                    </p>
+
+                    <a href="https://github.com/kmglobal86/student-management"
+                       target="_blank" rel="noopener noreferrer">
+                        View GitHub Repository →
+                    </a>
+
+                    <p style="margin-top:12px;font-size:13px;color:#64748b">
+                        Note: This repository may be private, so public visitors
+                        may not be able to access it.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>SaaS School Management System — Analysis</h3>
+
+                    <p>
+                        A system analysis portfolio case for a proposed
+                        multi-tenant School Management System, including
+                        requirements and planning documentation.
+                    </p>
+
+                    <ul>
+                        <li>Business requirements and scope</li>
+                        <li>Functional requirements planning</li>
+                        <li>System workflows and data design</li>
+                        <li>Architecture and API planning</li>
+                        <li>Roles, permissions, and acceptance criteria</li>
+                    </ul>
+
+                    <p style="margin-top:12px">
+                        This is a proposed system scope, not a claim that all
+                        planned features have been implemented.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical & Professional Skills</h2>
+
+            <p class="section-intro">
+                Skills and knowledge areas relevant to analysis, design,
+                implementation, and software delivery.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>PHP, Laravel, JavaScript, HTML, CSS</li>
+                        <li>Python fundamentals</li>
+                        <li>MySQL and SQL</li>
+                        <li>REST APIs, JSON, and Fetch API</li>
+                        <li>Git and GitHub</li>
+                        <li>System modeling and database design</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Process & Quality</h3>
+                    <ul>
+                        <li>Agile / Scrum</li>
+                        <li>Software Development Life Cycle (SDLC)</li>
+                        <li>CMMI Level 3-aligned software processes</li>
+                        <li>Requirements and change management</li>
+                        <li>Project coordination</li>
+                        <li>Software quality management</li>
+                        <li>Technical documentation</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>Master of Science (MSc)</h3>
+                    <p><strong>Computer Science and Engineering</strong></p>
+                    <p>Dhaka International University</p>
+                    <p>Completed</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+
+            <p class="section-intro">
+                For professional discussions, project collaboration,
+                or opportunities related to system analysis and software.
+            </p>
+
+            <div class="contact-box">
+                <h3>Let's Connect</h3>
+
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:kawsar.mia296@gmail.com">
+                        kawsar.mia296@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/kmglobal86"
+                       target="_blank" rel="noopener noreferrer">
+                        github.com/kmglobal86
+                    </a>
+                </p>
+
+                <div class="buttons">
+                    <a class="btn" href="mailto:kawsar.mia296@gmail.com">
+                        Send Email
+                    </a>
+
+                    <a class="btn btn-outline"
+                       href="https://github.com/kmglobal86"
+                       target="_blank" rel="noopener noreferrer"
+                       style="border-color:#93c5fd;color:#93c5fd">
+                        Visit GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>© <span id="year"></span> Kawsar Mia. All rights reserved.</p>
+        <p>System Analysis | System Design | Software Development | DevOps</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
